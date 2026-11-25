@@ -1,0 +1,137 @@
+{
+  "rows": {
+    "train_1994": 6142,
+    "validation_1995": 5195,
+    "test_1996": 4083
+  },
+  "fraud_rate": {
+    "all": 0.0599,
+    "test": 0.0522
+  },
+  "device": "cuda",
+  "results": [
+    {
+      "model": "Decision Tree + SMOTE (original best)",
+      "pr_auc": 0.1444,
+      "roc_auc": 0.7728,
+      "precision": 0.1059,
+      "recall": 0.8263,
+      "f1": 0.1877,
+      "fraud_caught_reviewing_10pct": 0.277,
+      "fraud_caught_reviewing_20pct": 0.4695,
+      "threshold": 0.1029,
+      "pr_auc_95ci": [
+        0.1165,
+        0.1777
+      ],
+      "roc_auc_95ci": [
+        0.7466,
+        0.7972
+      ],
+      "fit_seconds": 3.6
+    },
+    {
+      "model": "XGBoost",
+      "pr_auc": 0.1282,
+      "roc_auc": 0.7468,
+      "precision": 0.109,
+      "recall": 0.9531,
+      "f1": 0.1956,
+      "fraud_caught_reviewing_10pct": 0.1878,
+      "fraud_caught_reviewing_20pct": 0.3239,
+      "threshold": 0.0363,
+      "pr_auc_95ci": [
+        0.1029,
+        0.1612
+      ],
+      "roc_auc_95ci": [
+        0.7238,
+        0.7707
+      ],
+      "fit_seconds": 3.1
+    },
+    {
+      "model": "Random Forest (class-weighted)",
+      "pr_auc": 0.111,
+      "roc_auc": 0.7546,
+      "precision": 0.1084,
+      "recall": 0.9155,
+      "f1": 0.1938,
+      "fraud_caught_reviewing_10pct": 0.216,
+      "fraud_caught_reviewing_20pct": 0.385,
+      "threshold": 0.1593,
+      "pr_auc_95ci": [
+        0.0937,
+        0.1375
+      ],
+      "roc_auc_95ci": [
+        0.729,
+        0.7797
+      ],
+      "fit_seconds": 5.0
+    },
+    {
+      "model": "Logistic Regression (class-weighted)",
+      "pr_auc": 0.1015,
+      "roc_auc": 0.7531,
+      "precision": 0.0999,
+      "recall": 0.5164,
+      "f1": 0.1674,
+      "fraud_caught_reviewing_10pct": 0.1737,
+      "fraud_caught_reviewing_20pct": 0.4085,
+      "threshold": 0.592,
+      "pr_auc_95ci": [
+        0.0868,
+        0.1221
+      ],
+      "roc_auc_95ci": [
+        0.7298,
+        0.7746
+      ],
+      "fit_seconds": 2.8
+    }
+  ],
+  "best_model": "Decision Tree + SMOTE (original best)",
+  "shap_top_features": [
+    {
+      "feature": "BasePolicy_Liability",
+      "mean_abs_shap": 0.5164
+    },
+    {
+      "feature": "is_Fault",
+      "mean_abs_shap": 0.4872
+    },
+    {
+      "feature": "BasePolicy_All Perils",
+      "mean_abs_shap": 0.1288
+    },
+    {
+      "feature": "AddressChange-Claim",
+      "mean_abs_shap": 0.0514
+    },
+    {
+      "feature": "month",
+      "mean_abs_shap": 0.0492
+    },
+    {
+      "feature": "month_claimed",
+      "mean_abs_shap": 0.0467
+    },
+    {
+      "feature": "BasePolicy_Collision",
+      "mean_abs_shap": 0.038
+    },
+    {
+      "feature": "Age",
+      "mean_abs_shap": 0.0331
+    },
+    {
+      "feature": "VehicleCategory_Sport",
+      "mean_abs_shap": 0.0317
+    },
+    {
+      "feature": "Deductible",
+      "mean_abs_shap": 0.0247
+    }
+  ]
+}
