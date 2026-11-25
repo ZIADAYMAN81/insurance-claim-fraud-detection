@@ -1,5 +1,7 @@
 # Insurance Claim Fraud Detection
 
+[![tests](https://github.com/ZIADAYMAN81/insurance-claim-fraud-detection/actions/workflows/tests.yml/badge.svg)](https://github.com/ZIADAYMAN81/insurance-claim-fraud-detection/actions/workflows/tests.yml)
+
 > Machine Learning coursework, The British University in Egypt, 2026. Author: Ziad Ayman.
 
 Which vehicle insurance claims deserve a fraud investigation? 15,420 claims from 1994–1996, **6% fraudulent**, described by 32 mostly text-coded attributes (policy type, fault, vehicle price range, days between policy start and accident, address changes...). The models are trained on earlier years and tested on the **following year**, the way an insurer would actually use them, and every experiment is tracked in **MLflow**.
@@ -57,3 +59,6 @@ The original notebook (in `notebooks/`) explored the data, compared KNN, SVM and
 
 ## Tech stack
 Python · scikit-learn · imbalanced-learn · XGBoost (CUDA) · MLflow · SHAP · pandas · matplotlib · pytest
+
+## License
+MIT, see [LICENSE](LICENSE).
